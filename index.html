@@ -3,50 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seasons of Giving LKN</title>
+    <title>Seasons of Giving Lake Norman</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --green: #2d5a27; --green-dark: #1e3d1a; --green-pale: #f1f8f1;
-            --green-border: #d4e8d4; --gold: #b8860b; --rust: #a0522d;
-            --gray: #666; --bg: #f8f9fa;
+            --gold: #b8860b; --rust: #a0522d; --white: #ffffff;
         }
-        body { font-family: 'Montserrat', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
-        .sec-hdr { background: linear-gradient(135deg, var(--green-dark), var(--green)); color: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
-        .sec-hdr h2 { margin: 0; font-size: 2rem; }
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .prog-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; transition: transform 0.2s; }
-        .prog-card:hover { transform: translateY(-5px); }
-        .icon { font-size: 3rem; margin-bottom: 10px; }
-        h4 { margin: 10px 0; color: var(--green-dark); }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: #f8f9fa; color: #333; line-height: 1.6; }
+        
+        /* Navigation */
+        nav { background: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 900; color: var(--green); font-size: 1.2rem; text-transform: uppercase; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=2000'); 
+                background-size: cover; background-position: center; height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h1 { font-size: 3rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 20px auto; }
+
+        /* Content Sections */
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; position: relative; }
+        .mission-box { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; border-bottom: 5px solid transparent; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card.youth { border-color: var(--green); }
+        .card.adult { border-color: var(--gold); }
+        .card.senior { border-color: var(--rust); }
+        .icon { font-size: 3.5rem; margin-bottom: 15px; display: block; }
+        
+        footer { background: var(--green-dark); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <div class="sec-hdr">
-        <h2>🍃 Our Mission</h2>
-        <p>Seasons of Giving Lake Norman empowers <strong>youth, adults, and seniors</strong> by creating intergenerational pathways to connection, growth, and opportunity.</p>
+    <nav>
+        <div class="logo">Seasons of Giving LKN</div>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>Community Connection</h1>
+            <p>Empowering Lake Norman through intergenerational pathways.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="mission-box">
+            <h2 style="color: var(--green);">Our Mission</h2>
+            <p>Seasons of Giving Lake Norman empowers <strong>youth, adults, and seniors</strong> by creating pathways to connection, growth, and opportunity.</p>
+        </section>
+
+        <div class="card-grid">
+            <div class="card youth">
+                <span class="icon">🎓</span>
+                <h3>Preparing Our Youth</h3>
+                <p>Career readiness and soft skills from middle school through career placement.</p>
+            </div>
+            <div class="card adult">
+                <span class="icon">💼</span>
+                <h3>Empowering Adults</h3>
+                <p>Career counseling and job placement for those in transition.</p>
+            </div>
+            <div class="card senior">
+                <span class="icon">❤️</span>
+                <h3>Honoring Our Seniors</h3>
+                <p>Weekly meal delivery and resources through Novant Health partnerships.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="card-grid">
-        <div class="prog-card" style="border-top: 5px solid var(--green);">
-            <div class="icon">🎓</div>
-            <h4>Preparing Our Youth</h4>
-            <p>Career readiness and soft skills from middle school through career placement.</p>
-        </div>
-
-        <div class="prog-card" style="border-top: 5px solid var(--gold);">
-            <div class="icon">💼</div>
-            <h4>Empowering Adults</h4>
-            <p>Soft skills training, career counseling, and job placement for transitions.</p>
-        </div>
-
-        <div class="prog-card" style="border-top: 5px solid var(--rust);">
-            <div class="icon">❤️</div>
-            <h4>Honoring Our Seniors</h4>
-            <p>Weekly meal delivery, activities, and resources through Novant Health partnerships.</p>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Seasons of Giving Lake Norman. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
