@@ -604,8 +604,8 @@ id="mentor-form">
       <button onclick="regTue()" class="sbtn" style="background:#166534;">Request to Present &rarr;</button>
       <div id="tue-result"></div>
     </div>
-  </div>
-</div>  </div>
+ 
+</div> 
 
 <div class="panel" id="panel-register">
 <div style="height:28px;"></div>
@@ -1262,7 +1262,6 @@ function applyBannerPhotos(urls){
   var trackW=urls.length*232;
   var styleEl=document.getElementById('banner-anim-style');
   if(!styleEl){styleEl=document.createElement('style');styleEl.id='banner-anim-style';document.head.appendChild(styleEl);}
-  styleEl.textContent='@keyframes mq-scroll{0%{transform:translateX(0);}100%{transform:translateX(-'+trackW+'px);}}@keyframes mq-scroll-rev{0%{transform:translateX(-'+trackW+'px);}100%{transform:translateX(0);}}';
   function makeSlides(rev){var arr=rev?urls.slice().reverse():urls;return arr.concat(arr).map(function(u){return '<div class="mq-slide"><img src="'+u+'" alt="SOG" style="width:240px;height:160px;object-fit:cover;display:block;border-radius:8px;"></div>';}).join('');}
   var fwd=document.querySelector('.mq-track.mq-fwd');var rev=document.querySelector('.mq-track.mq-rev');
   if(fwd)fwd.innerHTML=makeSlides(false);if(rev)rev.innerHTML=makeSlides(true);
@@ -1304,4 +1303,4 @@ var PRINT_KEYS=['vol','corp','amb','overview','softskills','senior'];
 })();
 </script>
 </body>
-</html>
+  </html>
